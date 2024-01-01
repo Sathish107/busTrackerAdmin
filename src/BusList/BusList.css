@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    font-family: 'Poppins', sans-serif;
+    letter-spacing:0.125rem;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: #056F91;
+}
+
+h1{
+    color: #f7d4a8;
+}
+
+nav{
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkList{
+    list-style: none;
+    display: flex; 
+    align-items: center;
+    gap: 1rem;
+}
+
+.Link{
+    color: orange;
+    text-decoration: none;
+}
+
+.Link:hover{
+    color: #f7d4a8;
+    cursor: pointer;
+}
+
+.busList-search{
+    display:flex; 
+    margin: 0.5rem; 
+    align-items: center;
+}
+
+.busList-form{
+    flex-grow: 1;
+    height: 100%;  
+    margin-right: 1em;
+    padding-right: 1em;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.busList-input{ 
+    flex-grow: 1;
+    font-size: 1.3rem; 
+    padding: 0.5em; 
+    border: none;
+    outline: none;
+}
+
+.addButton{
+    border: none;
+    padding: 1rem;
+    background-color: rgb(227, 57, 57);
+    color: white;
+}
+
+.addButton:hover{
+    transform: scale(0.95);
+}
+
+main{
+    flex-grow: 1;
+    color: #056F91; 
+}
+
+table{
+    width: 100%;
+}
+
+thead{
+    position:sticky;
+    top: 108.8px;
+    background-color: #F2FCFF;
+}
+
+td,th{
+    text-align: center; 
+    padding: 0.125em;
+}
+
+/* td{
+    background-color: powderblue;
+} */
+
+.detailsButton{
+    color: #024257;
+    background-color: #f1c085;
+    border: 1px solid #056F91;
+    padding: 0.25em;
+}
+
+.detailsButton:hover{ 
+    transform:scale(0.95)
+} 

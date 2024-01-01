@@ -1,0 +1,14 @@
+{
+  "buses": [
+    {
+      "busNo": "TN 21",
+      "routeNo": "56",
+      "busType": "bharat 4",
+      "apiKey": "NZdpse6X7aElzQDA",
+      "status": "active",
+      "start": "Kanchipuram",
+      "destination": "SVCE college",
+      "id": 1
+    }
+  ]
+}

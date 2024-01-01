@@ -1,0 +1,80 @@
+.AddRoute-main{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+}
+
+.mapContainer{
+    margin: 1em 0.5em 1em 1em;
+}
+
+#map{
+    height: 100%;
+    width: 100%;
+}
+
+.AddRoute-form{
+    margin: 1em 1em 1em 0.5em;
+}
+
+.AddRoute-form input{
+    display: block;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+.Route-input{
+    display: flex;  
+}
+
+.Route-input button{ 
+    padding: 0 0.5rem; 
+    height: 3.1rem;
+    margin-left: 0.5rem;
+    background-color: white;
+    color: #056F91;
+    border: 1px solid black;
+}
+
+.Route-input button:hover{
+    transform: scale(0.98);
+}
+
+.Route-input svg{
+    font-size: 2rem;
+}
+
+.AddRoute-ul{
+    height: 200px;
+    overflow-y: scroll;
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+.AddRoute-ul li{
+    margin: 0.5em 0.5em 0.5em 0;
+    padding: 0.25em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color: powderblue;
+}
+
+.AddRoute-ul p{
+    font-weight: 600;
+}
+
+.AddRoute-ul svg{
+    color:rgb(88, 83, 83)
+}
+
+.AddRoute-ul svg:hover{
+    color: black;
+}
+
+.leaflet-control-container .leaflet-routing-container-hide {
+    display: none;
+}
