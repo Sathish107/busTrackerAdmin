@@ -1,9 +1,7 @@
 import { useState,useEffect } from "react";
 
 const Form=({routes})=>{
-    useEffect(()=>{
-        console.log(routes)
-    },[routes])
+    
     const generateApiKey=()=> {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         const apiKeyLength = 16;
@@ -17,37 +15,50 @@ const Form=({routes})=>{
         return apiKey;
     }
 
-    const findRoute=()=>{
-        routes.forEach(route => {
-            if(route.routeNo===routeNo){
-                const stops=route.stops
-                setStart(stops[0].stopName)
-                setDestination(stops[stops.length-1].stopName)
-            }
-        })
-    }
-    
     const [busNo,setbusNo]=useState('')
     const [routeNo,setRouteNo]=useState('')
     const [busType,setBusType]=useState('')
     const [apiKey,setApikey]=useState('')
     const [start,setStart]=useState('')
     const [destination,setDestination]=useState('')
+    const [routeId,setRouteId]=useState(null)
+    const [busList,setBusList]=useState([])
+
+    useEffect(()=>{
+        console.log(busList)
+    },[busList])
+
+    const findRoute=()=>{
+        routes.forEach(route => {
+            if(route.routeNo===routeNo){
+                setStart(route.start)
+                setDestination(route.destination)
+                setRouteId(route.id)
+                setBusList(route.buses)
+                return
+                
+            }else{
+                setStart('')
+                setDestination('')
+                setRouteId('')
+                setBusList([])                
+            }
+        })
+    }
 
     useEffect(()=>{
         findRoute()
-    },[busType])
-
-    const handleClick=()=>{
-        setApikey(generateApiKey())
-    }
+    },[routeNo])
 
     const handleSubmit=async (e)=>{
         e.preventDefault()
 
+        const response=await fetch('http://localhost:2001/buses')
+        const busesFound=await response.json()
+        const id =busesFound.length+1
 
-        console.log(start,destination)
         const newBus={
+            id:id,
             busNo:busNo,
             routeNo:routeNo,
             busType:busType,
@@ -65,7 +76,24 @@ const Form=({routes})=>{
             },
             body:JSON.stringify(newBus)
         }
-        const response=await fetch(url,options)
+        await fetch(url,options)
+
+        setBusList(async (previousBusList)=>{
+            await fetch(`http://localhost:2000/routes/${routeId}`,{
+                method:"PATCH",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify({buses:[...previousBusList,busNo]})
+            })
+            routes[0].buses=[...previousBusList,busNo]
+            
+            return([...previousBusList,busNo])
+        })
+
+
+        setRouteId(null)
+        setBusList([])
 
         setbusNo('')
         setRouteNo('')
@@ -90,7 +118,7 @@ const Form=({routes})=>{
                 id="routeNo"
                 placeholder="Enter valid route"
                 value={routeNo}
-                onChange={(e)=>setRouteNo(e.target.value)}
+                onChange={ (e)=>setRouteNo(e.target.value)}
             />
 
             <label htmlFor="busType">Bus Type</label>
@@ -117,7 +145,9 @@ const Form=({routes})=>{
 
             <button 
                 type="button"
-                onClick={()=>handleClick()}
+                onClick={()=>{
+                    setApikey(generateApiKey())
+                }}
                 className='addButton' 
                 style={{
                     backgroundColor:"green",

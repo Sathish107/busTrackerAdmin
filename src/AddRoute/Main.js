@@ -72,10 +72,23 @@ const Main=()=>{
     const handleSubmit=async (e)=>{
         e.preventDefault()
         generateReducedRoute()
+
+        const getResponse=await fetch("http://localhost:2000/routes")
+        const routesFound=await getResponse.json()
+        const id =routesFound.length+1
+
+        const start=stops[0].stopName
+        const destination=stops[stops.length-1].stopName
+
         const newRoute={
+            id:id,
             routeNo:routeNo,
+            buses:[],
+            start:start,
+            destination:destination,
             stops:stops,
-            routeCoords:reducedCoords
+            routeCoords:reducedCoords,
+            travelTime:'calculating'
         }
         const url="http://localhost:2000/routes"
         const options={
