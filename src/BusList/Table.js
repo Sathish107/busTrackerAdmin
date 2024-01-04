@@ -1,11 +1,14 @@
 import Thead from "./Thead"
 import Tbody from "./Tbody"
 
-const Table=({buses})=>{
+const Table=({buses,handleClick})=>{
     return(
         <table>
             <Thead />
-            <Tbody buses={buses}/>
+            <Tbody 
+                buses={buses}
+                handleClick={handleClick}
+            />
         </table>
     )
 }

@@ -1,0 +1,30 @@
+.BusDetail-main{
+    display: flex;
+    justify-content: center;
+}
+
+.BusDetail-article{
+    max-height:400px ;
+    font-size: 1.2rem;
+    margin-top: 2em;
+    border: 1px solid black;
+}
+
+.BusDetail-article h2{
+    border-bottom: 1px solid black;
+    padding:0.2em 0.4em;
+    background-color: powderblue;
+}
+
+.BusDetail-article ul{
+    padding: 0.5em;
+    list-style: none;
+}
+
+.BusDetail-article li{
+    margin-bottom: 0.7em;
+}
+
+.BusDetail-article span{
+    font-weight: 700;
+}

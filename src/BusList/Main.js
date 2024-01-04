@@ -1,11 +1,15 @@
 import Table from "./Table"
 
-const Main=({buses})=>{
+const Main=({buses,handleClick})=>{
     return(
         <main>
             {
                 (buses.length)?
-                <Table buses={buses}/>:
+                <Table 
+                    buses={buses}
+                    handleClick={handleClick}
+
+                />:
                 <p
                     style={{
                         marginTop:"1rem",

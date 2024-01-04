@@ -1,12 +1,20 @@
+import Header from "../AddBus/Header"
+import Main from "./Main"
 import { useParams } from "react-router-dom"
+import './BusDetail.css'
 
-const BusDetail=()=>{
+const BusDetail=({buses})=>{
     const {id} =useParams()
-    console.log(id)
+
     return(
-        <main>
-            <h1>Bus Detail of {id}</h1>
-        </main>
+        <>
+            <Header />
+            <Main 
+                buses={buses}
+                id={id}
+            />
+        </>
+
     )
 }
 

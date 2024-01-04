@@ -1,8 +1,7 @@
-import {useNavigate} from 'react-router-dom'
+
 import {GoDotFill} from 'react-icons/go'
 
-const Tbody=({buses})=>{
-    const navigate=useNavigate()
+const Tbody=({buses,handleClick})=>{
     return(
         <tbody>
             {
@@ -32,9 +31,7 @@ const Tbody=({buses})=>{
                             <td>
                                 <button 
                                 className="detailsButton"
-                                onClick={(id)=>{
-                                    navigate(`/bus/${id}`)
-                                }}
+                                onClick={()=>handleClick(bus.id)}
                                 >Details</button>
                             </td>
                         </tr>
