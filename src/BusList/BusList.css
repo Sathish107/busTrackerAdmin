@@ -87,17 +87,17 @@ main{
     color: #056F91; 
 }
 
-table{
+.BusList-table{
     width: 100%;
 }
 
-thead{
+.BusList-table thead{
     position:sticky;
     top: 108.8px;
     background-color: #F2FCFF;
 }
 
-td,th{
+.BusList-table td,th{
     text-align: center; 
     padding: 0.125em;
 }

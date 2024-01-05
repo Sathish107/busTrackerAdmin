@@ -3,7 +3,7 @@ import Tbody from "./Tbody"
 
 const Table=({buses,handleClick})=>{
     return(
-        <table>
+        <table  className="BusList-table">
             <Thead />
             <Tbody 
                 buses={buses}

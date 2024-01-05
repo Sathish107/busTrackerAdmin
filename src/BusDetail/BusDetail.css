@@ -3,6 +3,48 @@
     justify-content: center;
 }
 
+.BusDetail-container div{
+    border:solid 1px #056F91;
+    border-bottom: none;
+    background-color: powderblue;
+    display: flex;
+    align-items: center;
+}
+
+.BusDetail-container h2{
+    flex-grow: 1;
+    margin-left: 1rem;
+}
+
+.BusDetail-container svg{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.BusDetail-container svg:hover{
+    color: #0c8cb7;
+}
+/* #f7d4a8 */
+/* #056F91 */
+
+.BusDetail-container {
+    padding-top: 1em;
+}
+
+.BusDetail-container table{
+    border: 1px solid #056F91;
+}
+
+.BusDetail-container td{
+    font-size: 1.3rem;
+    background-color: #F2FCFF;
+    padding: 0.2em 1rem;
+}
+
+.BusDetail-container tr td:first-child{
+    font-weight: 700;
+}
+
 .BusDetail-article{
     max-height:400px ;
     font-size: 1.2rem;
@@ -10,7 +52,7 @@
     border: 1px solid black;
 }
 
-.BusDetail-article h2{
+/* .BusDetail-article h2{
     border-bottom: 1px solid black;
     padding:0.2em 0.4em;
     background-color: powderblue;
@@ -27,4 +69,4 @@
 
 .BusDetail-article span{
     font-weight: 700;
-}
+} */
