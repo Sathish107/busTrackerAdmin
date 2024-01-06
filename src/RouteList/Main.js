@@ -1,6 +1,10 @@
-const Main=()=>{
+import Table from "./Table"
+
+const Main=({routes})=>{
     return(
-        <h1>RouteList</h1>
+        <Table 
+            routes={routes}
+        />
     )
 }
 

@@ -36,7 +36,7 @@ const Main=({buses,id})=>{
                             <td>{bus.apiKey}</td>
                         </tr>
                         <tr>
-                            <td>Status :</td>
+                            <td>Status </td>
                             <td>{bus.status}</td>
                         </tr>
                     </tbody>

@@ -1,11 +1,13 @@
 import Header from "./Header"
 import Main from "./Main"
 
-const RouteList=()=>{
+const RouteList=({routes})=>{
     return (
         <>
             <Header />
-            <Main />
+            <Main 
+                routes={routes}
+            />
         </>
     )
 }

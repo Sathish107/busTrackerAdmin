@@ -9,12 +9,17 @@ import { useState,useEffect } from 'react';
  
 function App() { 
   const [buses,setBuses]=useState([])
+  const [routes,setRoutes]=useState([])
 
   useEffect(()=>{
     const fetchData=async ()=>{
-        const response=await fetch('http://localhost:2001/buses')
-        const jsonData=await response.json()
-        setBuses(jsonData)
+        const busResponse=await fetch('http://localhost:2001/buses')
+        const jsonBusData=await busResponse.json()
+        setBuses(jsonBusData)
+
+        const routeResponse=await fetch('http://localhost:2000/routes')
+        const jsonRouteData=await routeResponse.json()
+        setRoutes(jsonRouteData)        
     }
     fetchData()
   },[])
@@ -23,7 +28,7 @@ function App() {
     <div className="App">
     <Routes>
       <Route path='/buses' element={<BusList buses={buses} />}/>
-      <Route path='/routes' element={<RouteList />}/>
+      <Route path='/routes' element={<RouteList routes={routes}/>}/>
       <Route path='/addRoute' element={<AddRoute />}/>
       <Route path='/addBus' element={<AddBus />} />
       <Route path='/bus/:id' element={<BusDetail buses={buses} />}/>
