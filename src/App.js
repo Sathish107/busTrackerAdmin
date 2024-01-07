@@ -32,7 +32,7 @@ function App() {
       <Route path='/addRoute' element={<AddRoute />}/>
       <Route path='/addBus' element={<AddBus />} />
       <Route path='/bus/:id' element={<BusDetail buses={buses} />}/>
-      <Route path='/route/:id' element={<RouteDetail />}/>
+      <Route path='/route/:id' element={<RouteDetail routes={routes}/>}/>
     </Routes>
     </div> 
   );

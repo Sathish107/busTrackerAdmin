@@ -1,8 +1,18 @@
-const RouteDetail=()=>{
+import Header from "../AddBus/Header"
+import Main from "./Main"
+import { useParams } from "react-router-dom"
+
+const RouteDetail=({routes})=>{
+    const {id}=useParams()
     return(
-        <main>
-            <h1>Route Detail</h1>
-        </main>
+        <>
+            <Header />
+            <Main 
+                id={id}
+                routes={routes}
+            />
+        </>
+
     )
 }
 
