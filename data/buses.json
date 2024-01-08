@@ -5,40 +5,20 @@
       "busNo": "TN 21",
       "routeNo": "56",
       "busType": "bharat 4",
-      "apiKey": "iw6xm77Q2ftjeCE4",
+      "apiKey": "73AZqTYpcxKrIVyM",
       "status": "active",
-      "start": "Kanchipuram",
-      "destination": "Svce clg"
+      "start": "kpm",
+      "destination": "svce clg"
     },
     {
       "id": 2,
-      "busNo": "TN 22",
-      "routeNo": "56",
-      "busType": "bharat 4",
-      "apiKey": "Le3qv6KDAWaWUz41",
-      "status": "active",
-      "start": "Kanchipuram",
-      "destination": "Svce clg"
-    },
-    {
-      "id": 3,
-      "busNo": "TN 27",
-      "routeNo": "56",
-      "busType": "bharat 5",
-      "apiKey": "5tINwZOvIpcWYFT4",
-      "status": "active",
-      "start": "Kanchipuram",
-      "destination": "Svce clg"
-    },
-    {
-      "id": 4,
-      "busNo": "TN 12",
+      "busNo": "TN 29",
       "routeNo": "56",
       "busType": "bharat 7",
-      "apiKey": "dESi0DIRvgUDseIQ",
+      "apiKey": "l4uYsq1rkCKEKPtD",
       "status": "active",
-      "start": "Kanchipuram",
-      "destination": "Svce clg"
+      "start": "kpm",
+      "destination": "svce clg"
     }
   ]
 }

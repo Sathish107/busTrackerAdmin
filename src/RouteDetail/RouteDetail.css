@@ -1,24 +1,26 @@
+.RouteDetail-main{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+}
+
+.RouteDetail-container{
+    display: flex;
+    justify-content: center;
+}
+
 .RouteDetails-list{
     list-style: none;
     max-height:100px ;
     overflow-y: scroll;
 }
 
-/* .RouteDetails-list::-webkit-scrollbar {
-    width: 12px;
+ul:nth-child(1) li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
 }
-
-.RouteDetails-list::-webkit-scrollbar-thumb {
-    background-color: #49bbe1; 
-}
-
-.RouteDetails-list::-webkit-scrollbar-track {
-    background-color: #9bd8ed;  
-}
-
-.RouteDetails-list::-webkit-scrollbar-button {
-    background-color: aqua;  
-} */
 
 .RouteDetails-list li{
     padding-right: 1em;

@@ -22,7 +22,7 @@ const Form=({routes})=>{
     const [start,setStart]=useState('')
     const [destination,setDestination]=useState('')
     const [routeId,setRouteId]=useState(null)
-    const [busList,setBusList]=useState([])
+    const [busList,setBusList]=useState({id:null,busNo:''})
 
     useEffect(()=>{
         console.log(busList)
@@ -84,9 +84,10 @@ const Form=({routes})=>{
                 headers:{
                     "Content-Type":"application/json"
                 },
-                body:JSON.stringify({buses:[...previousBusList,busNo]})
+                body:JSON.stringify({buses:[...previousBusList,{id:id,busNo:busNo}]})
             })
-            routes[0].buses=[...previousBusList,busNo]
+            routes[0].buses=[...previousBusList,{id:id,busNo:busNo}]
+            console.log(routes[0].buses)
             
             return([...previousBusList,busNo])
         })
