@@ -4,6 +4,7 @@ import AddRoute from './AddRoute/AddRoute';
 import AddBus from './AddBus/AddBus';
 import BusDetail from './BusDetail/BusDetail';
 import RouteDetail from './RouteDetail/RouteDetail';
+import EditBus from './EditBus/EditBus';
 import {Route,Routes} from 'react-router-dom'
 import { useState,useEffect } from 'react';
  
@@ -33,6 +34,7 @@ function App() {
       <Route path='/addBus' element={<AddBus />} />
       <Route path='/bus/:id' element={<BusDetail buses={buses} />}/>
       <Route path='/route/:id' element={<RouteDetail routes={routes}/>}/>
+      <Route path='/editbus/:id' element={<EditBus buses={buses}/>} />
     </Routes>
     </div> 
   );
