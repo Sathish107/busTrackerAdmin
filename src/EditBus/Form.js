@@ -41,23 +41,17 @@ const Form=({buses,id})=>{
             body:JSON.stringify(newBus)
         }
         await fetch(url,options)
-
-        setbusNo('')
-        setRouteNo('')
-        setBusType('')
-        setApikey('')
     }
 
     return(
         <form className="AddBus-form" onSubmit={handleSubmit}>
             <label htmlFor="busNo">Bus No</label>
             <input
-                autoFocus
+                readOnly
                 id="busNo"
                 placeholder="Enter bus no"
                 required
                 value={busNo}
-                onChange={(e)=>setbusNo(e.target.value)}
             />
 
             <label htmlFor="routeNo">Route No</label>

@@ -2,9 +2,9 @@ import {FaTrash,} from 'react-icons/fa'
 import {MdEdit} from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
 
-const Main=({buses,id})=>{
+const Main=({buses,id,setIsClicked})=>{
     const Navigate=useNavigate()
-    const handleClick=((id)=>{
+    const handleEdit=((id)=>{
         console.log(id)
         Navigate(`/editbus/${id}`)
     })
@@ -18,9 +18,11 @@ const Main=({buses,id})=>{
                 <div>
                     <h2>{bus.busNo}</h2>
                     <MdEdit 
-                        onClick={()=>handleClick(id)}
+                        onClick={()=>handleEdit(id)}
                     />
-                    <FaTrash />
+                    <FaTrash 
+                        onClick={()=>setIsClicked(true)}
+                    />
                 </div>
                 <table>
                     <tbody>

@@ -12,6 +12,7 @@ const EditBus=({buses})=>{
                 buses={buses}
                 id={id}
             />
+
         </>
     )
 }

@@ -42,3 +42,37 @@
 .BusDetail-container tr td:first-child{
     font-weight: 700;
 }
+
+.delete-window{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%,0.66);
+}
+
+.delete-window div{  
+    width: 350px;
+    border: 3px solid rgb(94, 90, 90);
+    background-color: #eed7ba;
+    padding: 1.3em;
+    color: #056F91;
+    font-weight: 700;
+}
+
+.delete-window p{
+    margin-bottom: 1.3em;
+    font-size: 1.2rem;
+}
+
+.delete-window button{
+    font-size: inherit;
+    margin-right: 1.7em; 
+}
+
+.first-button{
+    background-color: rgb(86, 82, 82); 
+}
+

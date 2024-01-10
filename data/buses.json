@@ -1,24 +1,3 @@
 {
-  "buses": [
-    {
-      "id": 1,
-      "busNo": "TN 21",
-      "routeNo": "56",
-      "busType": "bharat 4",
-      "apiKey": "73AZqTYpcxKrIVyM",
-      "status": "active",
-      "start": "kpm",
-      "destination": "svce clg"
-    },
-    {
-      "id": 2,
-      "busNo": "TN 29",
-      "routeNo": "56",
-      "busType": "bharat 7",
-      "apiKey": "l4uYsq1rkCKEKPtD",
-      "status": "active",
-      "start": "kpm",
-      "destination": "svce clg"
-    }
-  ]
+  "buses": []
 }
