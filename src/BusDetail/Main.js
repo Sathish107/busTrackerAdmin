@@ -3,6 +3,7 @@ import {MdEdit} from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
 
 const Main=({buses,id,setIsClicked})=>{
+
     const Navigate=useNavigate()
     const handleEdit=((id)=>{
         console.log(id)
@@ -14,7 +15,7 @@ const Main=({buses,id,setIsClicked})=>{
     })
     return(
         <main className="BusDetail-main">
-            <div className="BusDetail-container">
+            {(buses.length)?<div className="BusDetail-container">
                 <div>
                     <h2>{bus.busNo}</h2>
                     <MdEdit 
@@ -52,7 +53,9 @@ const Main=({buses,id,setIsClicked})=>{
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div>:
+            <p>loading...</p>
+            }
         </main>
     )
 }

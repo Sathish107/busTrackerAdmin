@@ -1,3 +1,34 @@
 {
-  "buses": []
+  "buses": [
+    {
+      "id": 1,
+      "busNo": "TN 21",
+      "routeNo": "56",
+      "busType": "bharat 4",
+      "apiKey": "8qr8maldFcPmHO3w",
+      "status": "active",
+      "start": "kpm",
+      "destination": "SVCE clg"
+    },
+    {
+      "id": 2,
+      "busNo": "TN 12",
+      "routeNo": "56",
+      "busType": "bharat 7",
+      "apiKey": "TmsxgwyMagkfwyGj",
+      "status": "active",
+      "start": "kpm",
+      "destination": "SVCE clg"
+    },
+    {
+      "id": 3,
+      "busNo": "TN 29",
+      "routeNo": "56",
+      "busType": "bharat 4",
+      "apiKey": "4pN5w1zYD2Ht81tG",
+      "status": "active",
+      "start": "kpm",
+      "destination": "SVCE clg"
+    }
+  ]
 }

@@ -1,11 +1,11 @@
 import Header from "../AddBus/Header"
 import Main from "./Main"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { useParams ,useNavigate} from "react-router-dom"
 import './BusDetail.css'
 import DeleteWindow from "./DeleteWindow"
 
-const BusDetail=({buses})=>{
+const BusDetail=({buses})=>{ 
     const {id} =useParams()
     const Navigate=useNavigate()
     const [isClicked,setIsClicked]=useState(false)

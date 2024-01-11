@@ -1,6 +1,8 @@
 import { useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Form=({buses,id})=>{
+    const Navigate=useNavigate()
 
     const bus=buses.find((bus)=>{
         return((bus.id).toString()===id)
@@ -40,7 +42,12 @@ const Form=({buses,id})=>{
             },
             body:JSON.stringify(newBus)
         }
-        await fetch(url,options)
+        const response=await fetch(url,options)
+
+        if(response.ok){
+            
+            Navigate('/buses')
+        }
     }
 
     return(
