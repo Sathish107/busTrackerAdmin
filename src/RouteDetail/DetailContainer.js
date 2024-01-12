@@ -1,14 +1,16 @@
 import {FaTrash} from 'react-icons/fa'
 import { MdEdit } from 'react-icons/md'
 
-const DetailContainer=({route})=>{
+const DetailContainer=({route,setIsClicked})=>{
     return(
         <div className='RouteDetail-container'>
             <div className="BusDetail-container">
                 <div>
                     <h2>{route.routeNo}</h2>
                     <MdEdit />
-                    <FaTrash />
+                    <FaTrash 
+                        onClick={()=>setIsClicked(true)}
+                    />
                 </div>
                 <table>
                     <tbody>

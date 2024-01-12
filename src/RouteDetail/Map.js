@@ -24,7 +24,6 @@ const Map=({route})=>{
         }) 
 
         route.stops.forEach((stop) => {
-            console.log(stop)
             L.marker(stop.latlng,{icon:myMarker}).bindPopup(`<b>${stop.stopName}<b>`).addTo(map).openPopup()
         });
 
