@@ -2,7 +2,7 @@ import Map from './Map'
 import Form from './Form'
 import { useState } from 'react'
 
-const Main=()=>{
+const Main=({setRoutesMain})=>{
     const [markers,setMarkers]=useState([])
     const [routes,setRoutes]=useState([])
     const [routeCoords,setRouteCoords]=useState([])
@@ -99,7 +99,11 @@ const Main=()=>{
             body:JSON.stringify(newRoute)
         }
         const response=await fetch(url,options)
-        console.log(response)
+        if(response.ok){
+            setRoutesMain((previousRoutes)=>{
+                return([...previousRoutes,newRoute])
+            })
+        }
 
         setIsSubmitted(true)
         setRouteNo('')

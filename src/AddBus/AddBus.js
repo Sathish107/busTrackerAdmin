@@ -2,11 +2,14 @@ import Header from "./Header"
 import Main from "./Main"
 import './AddBus.css'
 
-const AddBus=()=>{
+const AddBus=({routes,setBuses})=>{
     return (
         <>
             <Header />
-            <Main />
+            <Main 
+                routes={routes}
+                setBuses={setBuses}
+            />
         </>
     )
 }

@@ -1,7 +1,7 @@
 import {FaSearch} from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 
-const Header=()=>{
+const Header=({search,setSearch})=>{
     const navigate=useNavigate();
     return (
         <header>
@@ -25,6 +25,8 @@ const Header=()=>{
                         required
                         placeholder="search route"
                         type="text"
+                        value={search}
+                        onChange={(e)=>setSearch(e.target.value)}
                     />
                     <FaSearch />
             </form>

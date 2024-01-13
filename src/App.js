@@ -25,15 +25,14 @@ function App() {
     fetchData()
   },[])
 
-  const data="success"
 
   return (
     <div className="App">
     <Routes>
       <Route path='/buses' element={<BusList buses={buses} />}/>
       <Route path='/routes' element={<RouteList routes={routes}/>}/>
-      <Route path='/addRoute' element={<AddRoute />}/>
-      <Route path='/addBus' element={<AddBus data={data}/>} />
+      <Route path='/addRoute' element={<AddRoute setRoutes={setRoutes}/>}/>
+      <Route path='/addBus' element={<AddBus setBuses={setBuses} routes={routes}/>} />
       <Route path='/bus/:id' element={<BusDetail buses={buses}/>}/>
       <Route path='/route/:id' element={<RouteDetail routes={routes}/>}/>
       <Route path='/editbus/:id' element={<EditBus buses={buses}/>} />

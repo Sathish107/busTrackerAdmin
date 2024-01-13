@@ -2,11 +2,13 @@ import Header from "../AddBus/Header"
 import Main from "./Main"
 import './AddRoute.css'
 
-const AddRoute=()=>{
+const AddRoute=({setRoutes})=>{
     return(
         <>
             <Header />
-            <Main />
+            <Main 
+                setRoutesMain={setRoutes}
+            />
         </>
     )
 }

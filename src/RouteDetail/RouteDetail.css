@@ -25,3 +25,7 @@ ul:nth-child(1) li{
 .RouteDetails-list li{
     padding-right: 1em;
 }
+
+#map{
+    z-index: 0;
+}

@@ -70,6 +70,7 @@
 .delete-window button{
     font-size: inherit;
     margin-right: 1.7em; 
+    z-index: 2;
 }
 
 .first-button{

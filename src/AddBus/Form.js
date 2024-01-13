@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 
-const Form=({routes})=>{
+const Form=({routes,setBuses})=>{
     
     const generateApiKey=()=> {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -76,7 +76,12 @@ const Form=({routes})=>{
             },
             body:JSON.stringify(newBus)
         }
-        await fetch(url,options)
+        const postResponse=await fetch(url,options)
+        if(postResponse.ok){
+            setBuses((previousBuses)=>{
+                return([...previousBuses,newBus])
+            })
+        }
 
         setBusList(async (previousBusList)=>{
             await fetch(`http://localhost:2000/routes/${routeId}`,{

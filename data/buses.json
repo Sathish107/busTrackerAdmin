@@ -4,31 +4,41 @@
       "id": 1,
       "busNo": "TN 21",
       "routeNo": "56",
-      "busType": "bharat 4",
-      "apiKey": "8qr8maldFcPmHO3w",
+      "busType": "bharat 7",
+      "apiKey": "9pAvaUznqbWMaZMV",
       "status": "active",
-      "start": "kpm",
-      "destination": "SVCE clg"
+      "start": "kanchipuram",
+      "destination": "SVCE college"
     },
     {
       "id": 2,
-      "busNo": "TN 12",
-      "routeNo": "56",
-      "busType": "bharat 7",
-      "apiKey": "TmsxgwyMagkfwyGj",
-      "status": "active",
-      "start": "kpm",
-      "destination": "SVCE clg"
-    },
-    {
-      "id": 3,
       "busNo": "TN 29",
       "routeNo": "56",
       "busType": "bharat 4",
-      "apiKey": "4pN5w1zYD2Ht81tG",
+      "apiKey": "6YL4mVKMDIj2MeIb",
       "status": "active",
-      "start": "kpm",
-      "destination": "SVCE clg"
+      "start": "kanchipuram",
+      "destination": "SVCE college"
+    },
+    {
+      "id": 3,
+      "busNo": "TN 12",
+      "routeNo": "56",
+      "busType": "bharat 6",
+      "apiKey": "bYCUHBTg5UkgctvH",
+      "status": "active",
+      "start": "kanchipuram",
+      "destination": "SVCE college"
+    },
+    {
+      "id": 4,
+      "busNo": "TN 15",
+      "routeNo": "56",
+      "busType": "bharat 4",
+      "apiKey": "4FvjPHzQn1oZqZWA",
+      "status": "active",
+      "start": "kanchipuram",
+      "destination": "SVCE college"
     }
   ]
 }
