@@ -1,3 +1,4 @@
+import Login from './Login/Login';
 import BusList from './BusList/BusList';
 import RouteList from './RouteList/RouteList';
 import AddRoute from './AddRoute/AddRoute';
@@ -11,6 +12,7 @@ import { useState,useEffect } from 'react';
 function App() { 
   const [buses,setBuses]=useState([])
   const [routes,setRoutes]=useState([])
+  const [admins,setAdmins]=useState([])
 
   useEffect(()=>{
     const fetchData=async ()=>{
@@ -20,7 +22,11 @@ function App() {
 
         const routeResponse=await fetch('http://localhost:2000/routes')
         const jsonRouteData=await routeResponse.json()
-        setRoutes(jsonRouteData)        
+        setRoutes(jsonRouteData) 
+        
+        const adminResponse=await fetch('http://localhost:2002/admins')
+        const jsonAdminData=await adminResponse.json()
+        setAdmins(jsonAdminData)
     }
     fetchData()
   },[])
@@ -29,6 +35,7 @@ function App() {
   return (
     <div className="App">
     <Routes>
+      <Route path='/' element={<Login admins={admins} />}/>
       <Route path='/buses' element={<BusList buses={buses} />}/>
       <Route path='/routes' element={<RouteList routes={routes}/>}/>
       <Route path='/addRoute' element={<AddRoute setRoutes={setRoutes}/>}/>

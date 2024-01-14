@@ -1,7 +1,10 @@
 import {FaTrash} from 'react-icons/fa'
 import { MdEdit } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 
 const DetailContainer=({route,setIsClicked})=>{
+    const Navigate=useNavigate()
+
     return(
         <div className='RouteDetail-container'>
             <div className="BusDetail-container">
@@ -49,6 +52,7 @@ const DetailContainer=({route,setIsClicked})=>{
                                                     <p>{bus.busNo}</p>
                                                     <button 
                                                         className='detailsButton'
+                                                        onClick={()=>Navigate(`/bus/${bus.id}`)}
                                                     >Details</button>
                                                 </li>
                                             )
